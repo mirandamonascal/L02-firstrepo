@@ -1,0 +1,75 @@
+---
+title: "My First Rmarkdown Document"
+author: "Mx Data"
+date: "2024-09-18"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>. Creating HTML type documents are 
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+# Basic Markdown Commands
+
+Demonstrated here are a few useful commands for how to write a nicely formatted document.
+
+## Headings and sub-headings
+
+Headings and sub-headings can be useful to break-up your report, adding sections to help advise the reader as to what they are about to read. Headings and sub-headings are made by adding the hash-symbol (`#`) at the start of the line. The number of hash-symbols indicate if you want to create a heading (`#`), a sub-heading (`##`) or a sub-sub-heading (`###`).
+
+## Boldface and italics
+
+There may be instances where you would like to highlight a particular phrase or word using either *italics* or **boldface**. To achieve this, surround the text that you wish to emphasis with either a single pair of asterisks to make it in the italics typeset (`*word*`) or a double pair of asterisks for boldface (`**word**`).
+
+## Lists
+
+Creating a bullet pointed list can be achieved by using the `-` or `*` character at the start of the line for each listed item:
+
+- item 1
+- item 2
+- item 3
+
+You can also use `1.` to create an enumerated list
+
+1. First
+2. Second
+3. Third
+
+## Mathematical Expressions
+
+LaTeX is a software system that is commonly used for typesetting mathematical expressions. For example, below creates a centered mathematical equation by writing a formula within two dollar characters (`$$`) 
+
+$$y = 2x + 1$$
+
+In-line mathematical expressions, such as the sample mean $\bar{x}$, can be made by typing the LaTeX command `\bar{x}` within a pair of single dollar characters (`$`).
+
+If you wish to learn more, [Overleaf](https://www.overleaf.com/learn/latex/Mathematical_expressions) contains some useful guides on how to write LaTeX code for generating nicely formatted mathematical expressions.
+
+## Embedding R code and output
+
+You can also embed coding chunks within your document. The example below first renders the code in your document, sends the content to `R` to be evaluated, and then renders the output below the code.
+
+```{r}
+log(5)
+```
+
+
+This also works for generating plots.
+
+```{r}
+x <- seq(from = -4, to = 4, by = 0.1)
+y <- x*(x - 2)*(x + 2) + 3
+plot(x, y, type = "l")
+```
+
+Do not worry if you don't understand what the above code does. Later in the course you will learn how to make prettier images using the `ggplot2` package.
